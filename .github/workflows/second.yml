@@ -1,0 +1,33 @@
+name: Download artifacts
+
+on:
+ workflow_run:
+   workflows: ["Build, Test and Upload Artifacts"]
+   types:
+     - completed
+
+jobs:
+  download_artifacts:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout to artifacts
+      run: git checkout -b artifacts-store
+    
+    - name: Download artifacts
+      uses: actions/download-artifact@v2
+      with:
+        name: my-artifacts
+        path: ./target
+
+    - name: Set up git
+      run: |
+        git config --global user.email "sophiee1300@gmail.com"
+        git config --global user.name "sophie"
+
+    - name: Commit and Push Artifacts
+      run: |
+        git add ./target
+        git commit -m "Add Artifacts"
+        
+        
