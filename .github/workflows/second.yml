@@ -13,8 +13,9 @@ jobs:
     
     - name: Checkout to artifacts
       run: |
+        git fetch origin my-artifacts
         git branch 
-        git checkout -b my-artifacts
+        git checkout my-artifacts
         git branch
     
     - name: Download artifacts
