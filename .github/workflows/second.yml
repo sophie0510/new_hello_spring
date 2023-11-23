@@ -9,10 +9,12 @@ jobs:
     
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v2
     
     - name: Checkout to artifacts
-      run: git checkout my-artifacts
+      run: |
+        echo "hi"
+        git checkout my-artifacts
     
     - name: Download artifacts
       uses: actions/download-artifact@v2
