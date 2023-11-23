@@ -12,7 +12,7 @@ jobs:
       uses: actions/checkout@v4
     
     - name: Checkout to artifacts
-      run: git checkout -b artifacts-store
+      run: git checkout artifacts-store
     
     - name: Download artifacts
       uses: actions/download-artifact@v2
