@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
     - name: Checkout to artifacts
       run: git checkout -b artifacts-store
     
