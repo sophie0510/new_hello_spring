@@ -35,3 +35,7 @@ jobs:
         with:
           name: my-artifacts
           path: ./target
+  
+  pushandcommit:
+    needs: build_and_upload
+    uses: ./.github/workflows/second.yml
