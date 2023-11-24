@@ -6,7 +6,7 @@ items:
   kind: Service
   metadata:
     annotations:
-      fabric8.io/git-commit: b2ac6f584463eb084846563360d146cfa469d84a
+      fabric8.io/git-commit: 67eb173f01397e4717f2eee96c743b67d8c3d801
       prometheus.io/port: "9779"
       fabric8.io/scm-url: https://github.com/spring-projects/spring-boot/spring-boot-starter-parent/hello
       fabric8.io/iconUrl: img/icons/spring-boot.svg
@@ -34,7 +34,7 @@ items:
   kind: Deployment
   metadata:
     annotations:
-      fabric8.io/git-commit: b2ac6f584463eb084846563360d146cfa469d84a
+      fabric8.io/git-commit: 67eb173f01397e4717f2eee96c743b67d8c3d801
       fabric8.io/iconUrl: img/icons/spring-boot.svg
       fabric8.io/git-branch: main
       fabric8.io/metrics-path: dashboard/file/kubernetes-pods.json/?var-project=hello&var-version=0.0.1-SNAPSHOT
@@ -57,7 +57,7 @@ items:
     template:
       metadata:
         annotations:
-          fabric8.io/git-commit: b2ac6f584463eb084846563360d146cfa469d84a
+          fabric8.io/git-commit: 67eb173f01397e4717f2eee96c743b67d8c3d801
           fabric8.io/metrics-path: dashboard/file/kubernetes-pods.json/?var-project=hello&var-version=0.0.1-SNAPSHOT
           fabric8.io/scm-url: https://github.com/spring-projects/spring-boot/spring-boot-starter-parent/hello
           fabric8.io/iconUrl: img/icons/spring-boot.svg
@@ -75,7 +75,7 @@ items:
             valueFrom:
               fieldRef:
                 fieldPath: metadata.namespace
-          image: hello/hello:snapshot-231123-122533-0416
+          image: hello/hello:snapshot-231124-061208-0366
           imagePullPolicy: IfNotPresent
           name: spring-boot
           ports:
