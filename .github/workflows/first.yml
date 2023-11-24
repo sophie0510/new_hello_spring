@@ -21,14 +21,8 @@ jobs:
           distribution: 'adopt'
           java-version: '11'
 
-      - name: List Files in Workspace
-        run: ls -R
-
       - name: Build with Maven
         run: mvn clean install
-
-      - name: Verify Contents of ./target
-        run: ls -R ./target
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
